@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import './../css/Navigation.css'
 import { faClock } from '@fortawesome/free-regular-svg-icons'
-import { faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import logo from './../images/core-img/logo.png'
 
@@ -28,34 +28,39 @@ const Navigation = () => {
                 </div>
             </div>
             <div className='nav-container'>
-                <div className='nav-logo'>
-                      <img src={logo} alt='logo' />
-                </div>
-                <div className='nav-btns'>
-                      <div>
-                        <NavLink exact to = '/'>Home</NavLink>
-                      </div>
-                      <div>
-                        <p>Pages</p>
-                      </div>
-                      <div>
-                        <NavLink exact to = '/portfolio'>Portfolio</NavLink>
-                      </div>
-                      <div>
-                        <NavLink exact to = '/services'>Services</NavLink>
-                      </div>
-                      <div>
-                        <NavLink exact to = '/aboutUs'>About us</NavLink>
-                      </div>
-                      <div>
-                        <NavLink exact to = '/blog'>Blog</NavLink>
-                      </div>
-                      <div>
-                        <NavLink exact to = '/contact'>Contact</NavLink>
-                      </div>
-                      <div>
-                        <button>BOOK NOW</button>
-                      </div>
+                <div className='nav-content'>
+                    <div className='nav-logo'>
+                        <img src={logo} alt='logo' />
+                    </div>
+                    <div className='nav-btns'>
+                        <div className='nav-btns-links'>
+                            <div>
+                                <NavLink to='/'>Home</NavLink>
+                            </div>
+                            <div className='nav-pages'>
+                                <p>Pages</p>
+                                <FontAwesomeIcon icon={faAngleDown} className='icon-angle-nav' />
+                            </div>
+                            <div>
+                                <NavLink to='/portfolio'>Portfolio</NavLink>
+                            </div>
+                            <div>
+                                <NavLink to='/services'>Services</NavLink>
+                            </div>
+                            <div>
+                                <NavLink to='/aboutUs'>About us</NavLink>
+                            </div>
+                            <div>
+                                <NavLink to='/blog'>Blog</NavLink>
+                            </div>
+                            <div>
+                                <NavLink to='/contact'>Contact</NavLink>
+                            </div>
+                        </div>
+                        <div>
+                            <button>BOOK NOW</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,16 +1,14 @@
 import { NavLink } from 'react-router-dom'
 import './../css/Navigation.css'
 import { faClock } from '@fortawesome/free-regular-svg-icons'
-import { faAngleDown, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown, faCartShopping, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import logo from './../images/core-img/logo.png'
-
-
-
+import Home from './Home'
 
 const Navigation = () => {
     return (
-        <div className='wrapper-main'>
+        <div className='nav-main'>
             <div className='top-nav-container'>
                 <div className='top-nav-content'>
                     <p>Welcome to beauty salon!</p>
@@ -57,11 +55,15 @@ const Navigation = () => {
                                 <NavLink to='/contact'>Contact</NavLink>
                             </div>
                         </div>
-                        <div>
+                        <div className='nav-btn'>
+                            <FontAwesomeIcon icon={faCartShopping} className='icon-cart-nav' />
                             <button>BOOK NOW</button>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div>
+                {Home}
             </div>
         </div>
     )

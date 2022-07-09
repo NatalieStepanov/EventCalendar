@@ -1,11 +1,14 @@
 .nav-main{
     width: 100%;
+    height: 150px;
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 .top-nav-container, .nav-container{
     width: 100%;
-    height: 50px;
+    height: 35%;
     background-color: #252525;
     margin: 0 auto;
 }
@@ -47,11 +50,17 @@
 /* Navigation */
 .nav-container{
     background-color: #ffffff;
-    height: 100px;
+    height: 70%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 17px;
 }
+
+.nav-logo:hover{
+    cursor: pointer;
+}
+
 .nav-btns{
     width: 76%;
     color: #252525;
@@ -60,6 +69,7 @@
 .nav-btns, .nav-btns-links{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .nav-btns-links{
@@ -73,7 +83,6 @@
 
 .nav-btns-links div a{
     text-align: center;
-    padding: 8px;
     padding-bottom: 5px;
     width: fit-content;
     display: block;
@@ -95,37 +104,54 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 8px;
+    line-height: 23px;
 }
 
 .nav-pages p{
     width: 45px;
     height: 25px;
-    margin-right: 5px;
+    margin: 0 5px 0 0;
+    padding: 0;
 }
 
 .icon-angle-nav{
     font-size: 16px;
+    margin-top: -3px;
 }
 
 .nav-btn{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 200px;
     align-items: center;
-    _padding-top: 5px;
     margin-right: 10px;
 }
 
 .icon-cart-nav{
-    font-size: 14px;
+    font-size: 12px;
+    transition: color 0.2s linear;
 }
 
-.nav-btn button{
-    width: 75%;
+.icon-cart-nav:hover{
+    color: #bca858;
+}
+
+.nav-btn a{
+    text-decoration: none;
+    color: #252525;
+    text-align: center;
+    width: 65%;
     background-color: #fffffe;
     border: 1px solid #252525;
     border-radius: 25px;
-    padding: 12px 28px;
+    padding: 10px 10px;
     font-size: 15px;
+    transition: all 0.4s linear;
+}
+
+.nav-btn a:hover{
+    background-color: #bca858;
+    border: none;
+    color: #fffffe;
 }

@@ -4,9 +4,14 @@ import { faClock } from '@fortawesome/free-regular-svg-icons'
 import { faAngleDown, faCartShopping, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import logo from './../images/core-img/logo.png'
-import Home from './Home'
+import { useNavigate } from 'react-router-dom'
 
 const Navigation = () => {
+    let navigate = useNavigate();
+    function handleClick() {
+        navigate('/')
+    }
+
     return (
         <div className='nav-main'>
             <div className='top-nav-container'>
@@ -28,7 +33,8 @@ const Navigation = () => {
             <div className='nav-container'>
                 <div className='nav-content'>
                     <div className='nav-logo'>
-                        <img src={logo} alt='logo' />
+                        <img src={logo} alt='logo'
+                            onClick={handleClick} />
                     </div>
                     <div className='nav-btns'>
                         <div className='nav-btns-links'>
@@ -57,13 +63,10 @@ const Navigation = () => {
                         </div>
                         <div className='nav-btn'>
                             <FontAwesomeIcon icon={faCartShopping} className='icon-cart-nav' />
-                            <button>BOOK NOW</button>
+                            <NavLink to='/authComponent'>BOOK NOW</NavLink>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                {Home}
             </div>
         </div>
     )
